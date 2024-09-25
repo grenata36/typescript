@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
 var User = /** @class */ (function () {
     function User(userId, name, email) {
         this.userId = userId;
@@ -13,5 +16,4 @@ var User = /** @class */ (function () {
     };
     return User;
 }());
-export { User };
-//# sourceMappingURL=User.js.map
+exports.User = User;

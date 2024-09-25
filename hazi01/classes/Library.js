@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Library = void 0;
 var Library = /** @class */ (function () {
     function Library(books) {
         this.books = [];
@@ -17,5 +20,4 @@ var Library = /** @class */ (function () {
     };
     return Library;
 }());
-export { Library };
-//# sourceMappingURL=Library.js.map
+exports.Library = Library;
