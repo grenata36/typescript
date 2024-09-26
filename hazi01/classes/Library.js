@@ -1,21 +1,25 @@
-var Library = /** @class */ (function () {
-    function Library(books) {
-        this.books = [];
-        this.books = books;
+"use strict";
+
+export class Library {
+    constructor(books) {
+        this.books = []; // Az üres tömb inicializálása
+        this.books = books; // Könyvek hozzárendelése
     }
-    Library.prototype.addBook = function (book) {
+
+    addBook(book) {
         this.books.push(book);
-    };
-    Library.prototype.removeBook = function (id) {
-        this.books = this.books.filter(function (book) { return book.id !== id; });
-    };
-    Library.prototype.findBookById = function (id) {
-        return this.books.find(function (book) { return book.id === book.id; }) || null;
-    };
-    Library.prototype.listAllBooks = function () {
+    }
+
+    removeBook(id) {
+        this.books = this.books.filter(book => book.id !== id);
+    }
+
+    findBookById(id) {
+        return this.books.find(book => book.id === id) || null;
+    }
+
+    listAllBooks() {
         return this.books;
-    };
-    return Library;
-}());
-export { Library };
-//# sourceMappingURL=Library.js.map
+    }
+}
+
