@@ -1,25 +1,23 @@
 "use strict";
-
-export class Library {
-    constructor(books) {
-        this.books = []; // Az üres tömb inicializálása
-        this.books = books; // Könyvek hozzárendelése
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Library = void 0;
+var Library = /** @class */ (function () {
+    function Library(books) {
+        this.books = [];
+        this.books = books;
     }
-
-    addBook(book) {
+    Library.prototype.addBook = function (book) {
         this.books.push(book);
-    }
-
-    removeBook(id) {
-        this.books = this.books.filter(book => book.id !== id);
-    }
-
-    findBookById(id) {
-        return this.books.find(book => book.id === id) || null;
-    }
-
-    listAllBooks() {
+    };
+    Library.prototype.removeBook = function (id) {
+        this.books = this.books.filter(function (book) { return book.id !== id; });
+    };
+    Library.prototype.findBookById = function (id) {
+        return this.books.find(function (book) { return book.id === book.id; }) || null;
+    };
+    Library.prototype.listAllBooks = function () {
         return this.books;
-    }
-}
-
+    };
+    return Library;
+}());
+exports.Library = Library;
