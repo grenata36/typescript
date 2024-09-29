@@ -14,10 +14,3 @@ const borrowedBook = user.borrowBook(library, "1");
 console.log(borrowedBook);
 console.log("Könyvek a könyvtárban kölcsönzés után");
 console.log(library.listAllBooks());
-
-
-
-
-
-
-
