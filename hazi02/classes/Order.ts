@@ -2,25 +2,25 @@
 
 import { Product } from "./Product";
 
-enum Status {
-    New = "New",
-    InProcessing = "In processing", //feldolgozás alatt
-    Delivered = "Delivered" //kiszállítva
+enum OrderStatus {
+    New = "Új",
+    InProcessing = "Feldolgozás alatt", 
+    Delivered = "Kiszállítva" 
 }
 
 export class Order extends Product {
     public OrderID: string;
-    public OrderStatus: Status;
+    public OrderStatus: OrderStatus;
     public products: Product[];
 
-    constructor(id: string, name: string, price: number, description: string, OrderID: string, OrderStatus: Status, products: Product[]) {
+    constructor(id: string, name: string, price: number, description: string, OrderID: string, OrderStatus: OrderStatus, products: Product[]) {
         super(id, name, price, description);
         this.OrderID = OrderID;
         this.OrderStatus = OrderStatus;
         this.products = products;
     }
 
-    updateStatus(newStatus: Status) {
+    updateStatus(newStatus: OrderStatus) {
         this.OrderStatus = newStatus;
     }
 
