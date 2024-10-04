@@ -8,7 +8,7 @@ export class TodoList<T> {
     @LogAddItem
     addItem(item: TodoItem<T>) : void {
         this.items.set(item.id, item);
-        console.log(`Item added: ${item.id} - ${item.content}`);
+        console.log(`Item added: ${item.id} - ${item.content} - ${item.dueDate}`);
     }
 
     removeItem (item: TodoItem<T>) : void {

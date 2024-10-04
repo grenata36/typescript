@@ -14,7 +14,7 @@ class TodoList {
     }
     addItem(item) {
         this.items.set(item.id, item);
-        console.log(`Item added: ${item.id} - ${item.content}`);
+        console.log(`Item added: ${item.id} - ${item.content} - ${item.dueDate}`);
     }
     removeItem(item) {
         if (this.items.has(item.id)) {
