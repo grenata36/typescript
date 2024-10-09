@@ -9,15 +9,13 @@ enum EventTheme {
 
 export class Event implements IEvent {
   public id: string;
-  public name: string;
   public location: string;
   public date: Date;
   public participants: string[];
   public eventTheme: EventTheme[];
 
-  constructor(id: string, name: string, location: string, date: Date, participants: string[], eventTheme: EventTheme[]) {
+  constructor(id: string, location: string, date: Date, participants: string[], eventTheme: EventTheme[]) {
     this.id = id;
-    this.name = name;
     this.location = location;
     this.date = date;
     this.participants = participants;
@@ -29,9 +27,6 @@ export class Event implements IEvent {
   }
 
   editEvent(details: Partial<IEvent>): void {
-    if (details.name !== undefined) {
-      this.name = details.name;
-    }
     if (details.location !== undefined) {
       this.location = details.location;
     }

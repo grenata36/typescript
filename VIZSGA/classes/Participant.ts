@@ -12,4 +12,5 @@ export class Participant implements IParticipant{         //résztvevő
         this.email = email;
         this.telephone = telephone;
     }
+
 }
