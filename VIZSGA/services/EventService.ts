@@ -7,15 +7,13 @@ export class Event implements IEvent {
   public location: string;
   public date: Date;
   public participants: string[];
-  public eventTheme: string;
 
-  constructor(id: string, name: string, location: string, date: Date, participants: string[], eventTheme: string) {
+  constructor(id: string, name: string, location: string, date: Date, participants: string[]) {
     this.id = id;
     this.name = name;
     this.location = location;
     this.date = date;
     this.participants = participants;
-    this.eventTheme = eventTheme;
   }
 
   addParticipant(participant: string): void {
@@ -35,10 +33,9 @@ export class Event implements IEvent {
     if (details.participants !== undefined) {
       this.participants = details.participants;
     }
-    if (details.eventTheme !== undefined) {
-      this.eventTheme = details.eventTheme;
-    }
   }
+
+  
 
   deleteEvent(events: Event[], eventId: string): Event[] {
     return events.filter(event => event.id !== eventId);
